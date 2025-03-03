@@ -1,0 +1,18 @@
+<!--pages/book-borrow/book-borrow.wxml-->
+<view class="main-conainer">
+
+    <view class="title">{{title}}</view>
+    
+    <progress 
+        percent="100"
+        stroke-width="5"
+        color="#4db6ac"
+        active="true"
+        wx:if="{{progress}}"/>
+    <view class="">
+	    <canvas style="width: 200px; height: 200px;margin:0 auto" canvas-id="myQrcode"></canvas>
+      <button  bindtap="onSave" data-value="myQrcode" style="margin-top: 100rpx">保存图片</button>
+    </view>
+     <view wx:if="{{borrowId == -1}}" class="error" style="color: #ef5350">{{errorMsg}}</view>
+
+</view>

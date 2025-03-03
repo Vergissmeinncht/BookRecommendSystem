@@ -1,0 +1,97 @@
+<!--pages/book-detail/book-detail.wxml-->
+<view class="main-container">
+    
+    <!--图书详情-->
+    <view class="desc-container">
+        <image src="http:{{book.bookImageBig}}"></image>
+        <view class="right">
+            <view class="title">{{book.bookName}}
+                <text wx:if="{{book.bookResidue == 0}}">(暂无)</text>
+            </view>
+            <view class="author">作者：{{book.bookAuthor}}</view>
+            <view class="press">出版社：{{book.bookPress}}</view>
+            <view class="classify1">分类：{{book.bookClassifyOne}}</view>
+            <view class="address">地址：{{book.bookAddress}}</view>
+            <view class="grade">评分：
+                <view  wx:if="{{book.bookGrade<0.5}}">
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=0.5 && book.bookGrade<1.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=1.5 && book.bookGrade<2.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                    <view  wx:if="{{book.bookGrade>=2.5 && book.bookGrade<3.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=3.5 && book.bookGrade<4.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_0.png"/>
+                </view>
+                <view  wx:if="{{book.bookGrade>=4.5}}">
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                    <image src="/images/main/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">{{book.bookGrade}}</text>
+            </view>
+        </view>
+    </view>
+
+    <!--内容介绍-->
+    <view class="content-container">
+        <text class="title">内容简介</text>
+        <text class="content" wx:if="{{book.bookDesc != ''}}">
+            {{book.bookDesc}}
+        </text>
+        <text class="content" wx:if="{{book.bookDesc == ''}}">
+            暂无简介
+        </text>
+    </view>
+
+    <!--相关书籍-->
+    <view class="recommended-container">
+        <text class="title">相似图书推荐</text>
+        <view class="book">
+            <image src="http:{{bookRecommend[0].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[0].bookId}}"></image>
+            <image src="http:{{bookRecommend[1].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[1].bookId}}"></image>
+            <image src="http:{{bookRecommend[2].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[2].bookId}}"></image>
+        </view>
+        <view class="book">
+            <image src="http:{{bookRecommend[3].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[3].bookId}}"></image>
+            <image src="http:{{bookRecommend[4].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[4].bookId}}"></image>
+            <image src="http:{{bookRecommend[5].bookImageBig}}" bindtap="bookDetailBtn" id="{{bookRecommend[5].bookId}}"></image>
+        </view>
+    </view>
+
+    <!--执行操作-->
+    <view class="operate-container">
+        <text class="title">您可以执行的操作</text>
+        <view class="btn btn-left"  wx:if="{{scanCode == 1}}" bindtap="borrowBtn" id="{{book.bookId}}">借阅本书</view>
+        <view class="disable-btn btn-left"  wx:if="{{scanCode == 0}}" bindtap="reserveBtn" id="{{book.bookId}}">预订本书</view>
+        <view class="btn btn-right" id="{{book.bookId}}" bindtap="addForumBtn">写文推荐</view>
+    </view>
+
+</view>

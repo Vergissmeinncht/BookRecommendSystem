@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "写文推荐",
+    "usingComponents": {
+      "floating-button": "/components/floating-button/floating-button"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "texttospeech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "iflytek",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~3.0.1",
+    "crypto-js": "^3.1.9-1",
+    "log4node": "^0.1.6",
+    "ws": "^7.1.2"
+  }
+}

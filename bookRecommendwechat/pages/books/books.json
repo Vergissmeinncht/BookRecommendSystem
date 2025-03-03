@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "floating-button": "/components/floating-button/floating-button"
+  }
+}

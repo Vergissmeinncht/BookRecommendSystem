@@ -1,0 +1,21 @@
+.floating-button {
+  position: fixed;
+  width: 50px; /* 按钮宽度 */
+  height: 50px; /* 按钮高度 */
+  border-radius: 25px; /* 圆形按钮 */
+  background-color: transparent; /* 按钮背景色 */
+  box-shadow: none; /* 按钮阴影 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.button-image {
+  width: 40px; /* 图片宽度 */
+  height: 40px; /* 图片高度 */
+}
+
+.active {
+  transform: scale(0.9); /* 按下时缩小 */
+}

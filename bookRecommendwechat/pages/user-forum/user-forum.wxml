@@ -1,0 +1,23 @@
+<!--pages/user-forum/user-forum.wxml-->
+<view class="main-container">
+
+    <view class="card" catchtap="showForumContentBtn" wx:for="{{forumAndComments}}" 
+    wx:for-item="forumAndComment" id="{{forumAndComment.forum.forumId}}">
+        <view class="title-row">{{forumAndComment.forum.forumTitle}}</view><view class="delete" catchtap="deleteBtn" id="{{forumAndComment.forum.forumId}}">删除</view>
+        <view class="content-row">
+            {{forumAndComment.forum.forumContent}}
+        </view>
+        <view class="book-row" bindtap="showBookDetailBtn" id="{{forumAndComment.forum.book.bookId}}">
+            <image src="http:{{forumAndComment.forum.book.bookImageBig}}"></image>
+            <view class="left">
+                <text class="title">{{forumAndComment.forum.book.bookName}}</text>
+                <text class="author">作者: {{forumAndComment.forum.book.bookAuthor}}</text>
+                <text class="press">出版社: {{forumAndComment.forum.book.bookPress}}</text>
+            </view>
+        </view>
+        <view class="comment-row">{{forumAndComment.forum.forumTime}}, {{forumAndComment.commentNumber}}评论</view>
+    </view>
+
+    <view wx:if="{{forumAndComments == 0}}" style="color:#666; font-size:32rpx; text-align:center; margin-top:100px;">暂无发帖</view>
+
+</view>

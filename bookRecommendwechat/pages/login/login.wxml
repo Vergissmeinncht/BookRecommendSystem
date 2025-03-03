@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <text class="errorMsg" wx:if="{{errorStatus}}">用户名或密码输入有误</text>
+  <view class="formContainer">
+    <form bindsubmit="formSubmit">
+      <view class="usernameContainer">
+        <image src="/images/login/login-user.png"></image>
+        <input type="text" name="username" placeholder="用户名" />
+      </view>
+      <view class="passwordContainer">
+        <image src="/images/login/login-password.png"></image>
+        <input type="password" name="password" placeholder="密码" />
+      </view>
+      <view class="form-item">
+        <input class="input font_14" name="guiCode" placeholder-class="grey" type="text" placeholder="输入图形验证码" maxlength="4" model:value="{{guiCode}}" bindinput="bindinput" />
+        <canvas style="position: relative; left: 462rpx; top: -99rpx; width: 216rpx; height: 99rpx; display: block; box-sizing: border-box" class="guiCode" type="2d" id="guiCodeCanvas" bindtap="guiCodeTap" />
+      </view>
+      <button class="loginBtn" formType="submit">登录</button>
+    </form>
+    <text class="navBtn" bindtap="navBtnOnClick">—— 新用户注册 ——</text>
+    <text class="navBtn" bindtap="forgetBtnOnClick">—— 忘记密码？ ——</text>
+  </view>
+</view>

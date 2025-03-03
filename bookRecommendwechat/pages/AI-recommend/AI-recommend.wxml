@@ -1,0 +1,25 @@
+<view class="chat-container">
+  <view class="chat-history">
+    <scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" style="height: 86.5vh;">
+      <view wx:for="{{chatHistory}}" wx:key="index" wx:for-item="item" id="msg_{{index}}">
+      <!-- 聊天气泡等内容 -->
+        <view class="chat-message {{item.isUser ? 'user-message' : 'ai-message'}}">
+          <image class="avatar" src="{{item.avatar}}"></image>
+          <view class="message-content">
+            <view class="text">{{item.text}}</view>
+          </view>
+        </view>
+        <button wx:if="{{!item.isUser}}" class="volume-btn" bindtap="onPlayText">
+            <image src="../../images/AI-recommend/声音.png" class ="button-image"></image>
+            </button>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="input-container">
+    <button class="voice-btn" bindtap="toggleRecording">
+    <image src="../../images/AI-recommend/麦克风,声音,录音,录制声音.png" class ="button-image"></image>
+    </button>
+    <input class="input-field" value="{{inputText}}" bindinput="onInputChange" placeholder="请输入你的内容..." />
+    <button class="send-button" bindtap="onSend">发送</button>
+  </view>
+</view>

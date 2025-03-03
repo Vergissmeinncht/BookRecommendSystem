@@ -1,0 +1,27 @@
+<!--pages/books/books.wxml-->
+<view class="main-container">
+
+    <!--沉浸式图书搜索-->
+    <view class="search-container">
+       <view class="books-search-container">
+            <icon type="search" size="18" />
+            <input style="width: 600rpx; height: 59rpx; display: block; box-sizing: border-box" placeholder="书籍信息" bindblur="changeInput"/>
+        </view>
+    </view>
+    <view style="margin-top: 10px;"></view>
+    <!--分类列表-->
+
+    <view class="classify">
+        <text class="name"></text> 
+        <text class="arrow"></text>
+    </view>
+
+    <view wx:for="{{classifyOnes}}" wx:for-index="idx" wx:for-item="classifyOne">
+        <view class="classify" data-name="{{classifyOne}}" bindtap="booksListBtn">
+            <view class="point background-color{{idx%10}}"></view>
+            <text class="name">{{classifyOne}}</text> 
+            <text class="arrow"> > </text>
+        </view>
+    </view>
+<floating-button></floating-button>
+</view>

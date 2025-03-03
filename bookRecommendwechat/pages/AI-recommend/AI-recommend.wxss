@@ -1,0 +1,102 @@
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  margin: 5px;
+}
+
+.user-message {
+  flex-direction: row-reverse; 
+}
+
+.ai-message {
+  flex-direction: row; 
+}
+
+.message-content {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  margin-left: 10px;
+}
+
+.user-message .message-content {
+  background-color: #9bdeac;
+  margin-left: 0;
+  margin-right: 10px; 
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.text {
+  font-size: 13px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.send-button {
+  right: 20px;
+  padding: 0px 20px 0px;
+  background-color: #11c1e0;
+  color: white;
+  border-radius: 10px;
+}
+scroll-view {
+  height: 250vh; /* 设置聊天记录区域的高度 */
+}
+.voice-btn{
+  display: flex;
+  align-items: flex-end;
+  width: 50px; /* 按钮宽度 */
+  height: 50px; /* 按钮高度 */
+  right: 5px;
+  border-radius: 25px; /* 圆形按钮 */
+  background-color: #ffffff; /* 按钮背景色 */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+.button-image {
+  width: 20px; /* 按钮宽度 */
+  height: 20px; /* 按钮高度 */
+}
+.volume-btn{
+  display: flex;
+  align-items: flex-end;
+  border: none;
+  max-width: 10%;
+  padding: 0px;
+  background-color: transparent;
+  margin-left:55px;
+}
+.voice-btn:active, .volume-btn:active {
+  background-color: #dcdcdc; /* 按下时的背景颜色 */
+  transform: scale(0.95); /* 按下时稍微缩小按钮 */
+}
+.send-btn:active{
+  background-color: #110de4; /* 按下时的背景颜色 */
+  transform: scale(0.95); /* 按下时稍微缩小按钮 */
+}
+
+

@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/scan-index/scan-index",
+    "pages/scan-login/scan-login",
+    "pages/scan-main/scan-main",
+    "pages/scan-admin/scan-admin",
+    "pages/book-return/book-return",
+    "pages/book-grade/book-grade",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/books/books",
+    "pages/books-search/books-search",
+    "pages/forum/forum",
+    "pages/user/user",
+    "pages/book-detail/book-detail",
+    "pages/books-list/books-list",
+    "pages/forum-content/forum-content",
+    "pages/forum-add/forum-add",
+    "pages/user-history/user-history",
+    "pages/user-forum/user-forum",
+    "pages/user-comment/user-comment",
+    "pages/user-setting/user-setting",
+    "pages/user-borrow/user-borrow",
+    "pages/book-borrow/book-borrow",
+    "pages/AI-recommend/AI-recommend",
+    "pages/user-recommend/user-recommend",
+    "pages/user-forget/user-forget"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4db6ac",
+    "navigationBarTitleText": "图书推荐系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "主页",
+        "iconPath": "images/tabBar/main_0.png",
+        "selectedIconPath": "images/tabBar/main_1.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "text": "书库",
+        "iconPath": "images/tabBar/books_0.png",
+        "selectedIconPath": "images/tabBar/books_1.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "images/tabBar/forum_0.png",
+        "selectedIconPath": "images/tabBar/forum_1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "images/tabBar/user_0.png",
+        "selectedIconPath": "images/tabBar/user_1.png"
+      }
+    ],
+    "borderStyle": "white",
+    "selectedColor": "#4db6ac",
+    "color": "#999"
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.5",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "usingComponents": {
+    "fui-button": "components/firstui/fui-button/fui-button"
+  }
+}

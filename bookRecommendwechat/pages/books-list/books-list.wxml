@@ -1,0 +1,14 @@
+<!--pages/books-list/books-list.wxml-->
+<view class="main-container">
+
+    <view wx:for="{{books}}" wx:for-item="book">
+        <view class="book-container" bindtap="bookDetailBtn" id="{{book.bookId}}">
+            <image src="http:{{book.bookImageBig}}"></image>
+            <view class="right" data-name="value">
+                <text class="title">{{book.bookName}}</text>
+                <text class="desc">作者：{{book.bookAuthor}}; 出版社：{{book.bookPress}}</text>
+            </view>
+        </view>
+    </view>
+
+</view>

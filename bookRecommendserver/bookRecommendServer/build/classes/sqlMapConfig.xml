@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<mappers>
+		<mapper resource="org/bookRecommend/mapper/BookMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/AdminMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/AdminMessageMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/UserMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/ForumMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/ForumCommentMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/BorrowMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/BookClassifyTwoMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/BorrowRecordMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/UserRecommendResultMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/BookRecommendResultMapper.xml"/>
+		<mapper resource="org/bookRecommend/mapper/BrowseRecordMapper.xml"/>
+	</mappers>
+ 
+</configuration>

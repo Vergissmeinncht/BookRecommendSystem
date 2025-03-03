@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "usingComponents": {
+      "floating-button": "/components/floating-button/floating-button"
+    }
+}

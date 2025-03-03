@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bookRecommendServer:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/bookRecommendServer_war</output-path>
+    <root id="archive" name="bookRecommendServer_war.war">
+      <element id="artifact" artifact-name="bookRecommendServer:war exploded" />
+    </root>
+  </artifact>
+</component>

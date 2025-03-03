@@ -1,0 +1,7 @@
+<!-- pages/floating-button/floating-button.wxml -->
+<view class="container">
+  <view class="floating-button {{active ? 'active' : ''}}" style="top:{{buttonTop}}px; left:{{buttonLeft}}px;" bindtouchstart="buttonStart" bindtouchmove="buttonMove" bindtouchend="buttonEnd" bindtap="goToPage">
+  <image src="../../images/AI-recommend/8书籍推荐助手.png" class="button-image"></image>
+  
+  </view>
+</view>
